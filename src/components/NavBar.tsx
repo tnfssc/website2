@@ -1,4 +1,4 @@
-import { HamburgerIcon } from "@chakra-ui/icons";
+import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import {
   Box,
   Drawer,
@@ -7,10 +7,17 @@ import {
   DrawerHeader,
   DrawerOverlay,
   IconButton,
+  List,
+  ListIcon,
+  ListItem,
   useDisclosure,
 } from "@chakra-ui/react";
 import { useRef } from "react";
 import { DarkModeSwitch } from "./DarkModeSwitch";
+import { MdDarkMode } from "react-icons/md";
+import Link from "./Link";
+
+export const NavBarHeight = "56px";
 
 export default function NavDrawer({}) {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -18,7 +25,12 @@ export default function NavDrawer({}) {
   return (
     <>
       <header>
-        <Box p="2">
+        <Box p="2" display="flex" justifyContent="space-between" alignItems="center">
+          <Box ml="5">
+            <Link href="/" onClick={onClose}>
+              website2
+            </Link>
+          </Box>
           <IconButton aria-label="open-drawer" ref={r => (btnRef.current = r)} onClick={onOpen}>
             <HamburgerIcon />
           </IconButton>
@@ -27,12 +39,23 @@ export default function NavDrawer({}) {
       <Drawer placement="right" onClose={onClose} isOpen={isOpen} size="sm" finalFocusRef={btnRef}>
         <DrawerOverlay />
         <DrawerContent>
-          <DrawerHeader borderBottomWidth="1px">Basic Drawer</DrawerHeader>
+          <DrawerHeader borderBottomWidth="1px">
+            <Box p="2" display="flex" justifyContent="space-between" alignItems="center">
+              <Link href="/" onClick={onClose}>
+                website2
+              </Link>
+              <IconButton aria-label="close-drawer" onClick={onClose}>
+                <CloseIcon />
+              </IconButton>
+            </Box>
+          </DrawerHeader>
           <DrawerBody>
-            <p>Some contents...</p>
-            <p>Some contents...</p>
-            <p>Some contents...</p>
-            <DarkModeSwitch />
+            <List>
+              <ListItem display="flex" alignItems="center">
+                <ListIcon as={MdDarkMode} w="10" h="10" />
+                <DarkModeSwitch />
+              </ListItem>
+            </List>
           </DrawerBody>
         </DrawerContent>
       </Drawer>

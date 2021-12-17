@@ -1,6 +1,7 @@
 import { Icon, IconProps } from "@chakra-ui/icons";
 import { Box, Center, HStack } from "@chakra-ui/react";
 import { FaLinkedin, FaGithub, FaTwitter, FaInstagram, FaYoutube } from "react-icons/fa";
+import { MdMail } from "react-icons/md";
 import Link from "./Link";
 
 type SocialIconsProps = {
@@ -14,6 +15,8 @@ const SocialIcon: React.FC<SocialIconsProps> = ({ href = "#", icon, size = "10" 
     <Icon as={icon} w={size} h={size} />
   </Link>
 );
+
+export const FooterHeight = "133.5px";
 
 export default function Footer() {
   return (
@@ -33,7 +36,7 @@ export default function Footer() {
           <HStack spacing="5">
             <SocialIcon href="https://www.linkedin.com/in/tnfssc" icon={FaLinkedin} />
             <SocialIcon href="https://twitter.com/tnfssc" icon={FaTwitter} />
-            <SocialIcon href="https://www.instagram.com/tnfssc/" icon={FaInstagram} />
+            <SocialIcon href="mailto:tnfssc@gmail.com" icon={MdMail} />
             <SocialIcon href="https://www.youtube.com/channel/UCuB3HpVwVpNyaVxjr8k5Geg" icon={FaYoutube} />
             <SocialIcon href="https://github.com/tnfssc" icon={FaGithub} />
           </HStack>

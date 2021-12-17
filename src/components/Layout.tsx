@@ -1,7 +1,7 @@
 import { Container } from "@chakra-ui/react";
 import Head from "next/head";
-import Footer from "./Footer";
-import NavDrawer from "./NavBar";
+import Footer, { FooterHeight } from "./Footer";
+import NavDrawer, { NavBarHeight } from "./NavBar";
 
 export default function Layout({ children }: { children: React.ReactNode }): React.ReactElement {
   return (
@@ -13,7 +13,7 @@ export default function Layout({ children }: { children: React.ReactNode }): Rea
       </Head>
       <NavDrawer />
       <main>
-        <Container>{children}</Container>
+        <Container minH={`calc(100vh - ${NavBarHeight} - ${FooterHeight})`}>{children}</Container>
       </main>
       <Footer />
     </>

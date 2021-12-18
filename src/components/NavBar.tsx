@@ -10,12 +10,15 @@ import {
   List,
   ListIcon,
   ListItem,
+  Text,
   useDisclosure,
 } from "@chakra-ui/react";
 import { useRef } from "react";
 import { DarkModeSwitch } from "./DarkModeSwitch";
-import { MdDarkMode } from "react-icons/md";
+import { MdDarkMode, MdSchool, MdSportsCricket } from "react-icons/md";
+import { GiSkills } from "react-icons/gi";
 import Link from "./Link";
+import { FaProjectDiagram } from "react-icons/fa";
 
 export const NavBarHeight = "56px";
 
@@ -50,10 +53,35 @@ export default function NavDrawer({}) {
             </Box>
           </DrawerHeader>
           <DrawerBody>
-            <List>
-              <ListItem display="flex" alignItems="center">
-                <ListIcon as={MdDarkMode} w="10" h="10" />
+            <List h="100%" display="flex" flexDirection="column">
+              <ListItem display="flex" alignItems="center" fontSize="2xl" py="1.5">
+                <Link href="/projects">
+                  <ListIcon as={FaProjectDiagram} w="7" h="7" />
+                  Projects
+                </Link>
+              </ListItem>
+              <ListItem display="flex" alignItems="center" fontSize="2xl" py="1.5">
+                <Link href="/skills">
+                  <ListIcon as={GiSkills} w="7" h="7" />
+                  Skills
+                </Link>
+              </ListItem>
+              <ListItem display="flex" alignItems="center" fontSize="2xl" py="1.5">
+                <Link href="/acads">
+                  <ListIcon as={MdSchool} w="7" h="7" />
+                  Academics
+                </Link>
+              </ListItem>
+              <ListItem display="flex" alignItems="center" fontSize="2xl" py="1.5">
+                <Link href="/hobbies">
+                  <ListIcon as={MdSportsCricket} w="7" h="7" />
+                  Hobbies
+                </Link>
+              </ListItem>
+              <ListItem flexGrow={1} />
+              <ListItem display="flex" alignItems="center" fontSize="2xl" py="1.5">
                 <DarkModeSwitch />
+                <Text pl="2">Dark mode</Text>
               </ListItem>
             </List>
           </DrawerBody>

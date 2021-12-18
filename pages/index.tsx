@@ -1,12 +1,45 @@
-import { Center, Heading } from "@chakra-ui/react";
-import { NextPageWithLayout } from "../global";
+import { Heading, Text, VStack } from "@chakra-ui/react";
+import { MainHeight } from "../src/constants";
+import { GetServerSideProps, InferGetServerSidePropsType } from "next";
 
-const Home: NextPageWithLayout = () => {
-  return (
-    <Center>
-      <Heading>Hi!</Heading>
-    </Center>
-  );
+type Response = {
+  _id: string;
+  // The quotation text
+  content: string;
+  // The full name of the author
+  author: string;
+  // The `slug` of the quote author
+  authorSlug: string;
+  // The length of quote (number of characters)
+  length: number;
+  // An array of tag names for this quote
+  tags: string[];
 };
 
-export default Home;
+export const getServerSideProps: GetServerSideProps<{ quote: Response }> = async () => {
+  const defaultQuote: Response = {
+    _id: "-1",
+    content: "Zzzzz...",
+    author: "me",
+    authorSlug: "me",
+    length: 8,
+    tags: ["default"],
+  };
+  if (Math.random() > 0.5) return { props: { quote: defaultQuote } };
+  try {
+    const res = await fetch("https://api.quotable.io/random");
+    const data = await res.json();
+    return { props: { quote: data } };
+  } catch (err) {
+    return { props: { quote: defaultQuote } };
+  }
+};
+
+export default function Home({ quote }: InferGetServerSidePropsType<typeof getServerSideProps>) {
+  return (
+    <VStack display="flex" flexDirection="column" justifyContent="center" height={MainHeight}>
+      <Heading textAlign="center">{quote.content}</Heading>
+      <Text>- {quote.author}</Text>
+    </VStack>
+  );
+}

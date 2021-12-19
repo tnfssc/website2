@@ -14,7 +14,7 @@ export default function Layout({ children }: { children: React.ReactNode }): Rea
       </Head>
       <NavDrawer />
       <main>
-        <Container minH={MainHeight}>{children}</Container>
+        <Container maxW={"full"} minH={MainHeight}>{children}</Container>
       </main>
       <Footer />
     </>

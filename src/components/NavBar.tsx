@@ -1,11 +1,13 @@
-import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
+import { HamburgerIcon } from "@chakra-ui/icons";
 import {
   Box,
+  CloseButton,
   Drawer,
   DrawerBody,
   DrawerContent,
   DrawerHeader,
   DrawerOverlay,
+  Icon,
   IconButton,
   List,
   ListIcon,
@@ -15,7 +17,7 @@ import {
 } from "@chakra-ui/react";
 import { useRef } from "react";
 import { DarkModeSwitch } from "./DarkModeSwitch";
-import { MdDarkMode, MdSchool, MdSportsCricket } from "react-icons/md";
+import { MdSchool, MdSportsCricket, MdHome } from "react-icons/md";
 import { GiSkills } from "react-icons/gi";
 import Link from "./Link";
 import { FaProjectDiagram } from "react-icons/fa";
@@ -29,9 +31,9 @@ export default function NavDrawer({}) {
     <>
       <header>
         <Box p="2" display="flex" justifyContent="space-between" alignItems="center">
-          <Box ml="5">
+          <Box>
             <Link href="/" onClick={onClose}>
-              website2
+              <IconButton aria-label="home" icon={<Icon as={MdHome} w="7" h="7" />} />
             </Link>
           </Box>
           <IconButton aria-label="open-drawer" ref={r => (btnRef.current = r)} onClick={onOpen}>
@@ -44,12 +46,8 @@ export default function NavDrawer({}) {
         <DrawerContent>
           <DrawerHeader borderBottomWidth="1px">
             <Box p="2" display="flex" justifyContent="space-between" alignItems="center">
-              <Link href="/" onClick={onClose}>
-                website2
-              </Link>
-              <IconButton aria-label="close-drawer" onClick={onClose}>
-                <CloseIcon />
-              </IconButton>
+              <Box />
+              <CloseButton onClick={onClose} />
             </Box>
           </DrawerHeader>
           <DrawerBody>
@@ -79,7 +77,7 @@ export default function NavDrawer({}) {
                 </Link>
               </ListItem>
               <ListItem flexGrow={1} />
-              <ListItem display="flex" alignItems="center" fontSize="2xl" py="1.5">
+              <ListItem display="flex" alignItems="center" fontSize="xl" py="1.5">
                 <DarkModeSwitch />
                 <Text pl="2">Dark mode</Text>
               </ListItem>

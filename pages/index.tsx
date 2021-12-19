@@ -7,7 +7,7 @@ type Response = {
   // The quotation text
   content: string;
   // The full name of the author
-  author: string;
+  author?: string;
   // The `slug` of the quote author
   authorSlug: string;
   // The length of quote (number of characters)
@@ -20,7 +20,6 @@ export const getServerSideProps: GetServerSideProps<{ quote: Response }> = async
   const defaultQuote: Response = {
     _id: "-1",
     content: "Zzzzz...",
-    author: "me",
     authorSlug: "me",
     length: 8,
     tags: ["default"],
@@ -39,7 +38,7 @@ export default function Home({ quote }: InferGetServerSidePropsType<typeof getSe
   return (
     <VStack display="flex" flexDirection="column" justifyContent="center" height={MainHeight}>
       <Heading textAlign="center">{quote.content}</Heading>
-      <Text>- {quote.author}</Text>
+      {quote.author && <Text>- {quote.author}</Text>}
     </VStack>
   );
 }

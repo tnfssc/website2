@@ -15,23 +15,23 @@ const Academics: NextPageWithLayout = () => {
           <ListItem alignItems="center" display="flex" fontSize="19" mb="5">
             <ListIcon as={MdSchool} w="7" h="7" />
             <Link href="https://iith.ac.in" isExternal>
-              <Text fontWeight="bold">IIT Hyderabad</Text>
+              <Text fontWeight="bold">IIT Hyderabad</Text>&nbsp;(B. Tech) - Electrical Engineering and Engineering
+              Science
             </Link>
-            &nbsp;(B. Tech) - Electrical Engineering and Engineering Science
           </ListItem>
           <ListItem alignItems="center" display="flex" fontSize="19" mb="5">
             <ListIcon as={FaUniversity} w="7" h="7" />
             <Link href="http://www.velociity.co.in" isExternal>
               <Text fontWeight="bold">VelocIITy Jr. College (defunct)</Text>
+              &nbsp;(12th) - Physics, Chemistry and Math
             </Link>
-            &nbsp;(12th) - Physics, Chemistry and Math
           </ListItem>
           <ListItem alignItems="center" display="flex" fontSize="19" mb="5">
             <ListIcon as={FaSchool} w="7" h="7" />
             <Link href="http://dilsukhnagarpublicschools.com" isExternal>
               <Text fontWeight="bold">Dilshuknagar Public School</Text>
+              &nbsp;(10th) - Telangana Board of Secondary School Education
             </Link>
-            &nbsp;(10th) - Telangana Board of Secondary School Education
           </ListItem>
         </List>
       </VStack>

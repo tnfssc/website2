@@ -60,7 +60,7 @@ export default function Card({
             </Box>
           </Flex>
         </Box>
-        <Box display={"flex"} flexDirection={"column"} justifyContent={"space-between"} flexGrow={1}>
+        <Box display={"flex"} flexDirection={"column"} justifyContent={"space-between"} flexGrow={1} mt={6}>
           <Heading color={colorModeValue("gray.700", "white")} fontSize={"2xl"} fontFamily={"body"} {...titleProps}>
             {title}
           </Heading>
@@ -78,7 +78,7 @@ export default function Card({
           <ModalHeader {...titleProps}>{title}</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
-            <Box bg={"white"} pos="relative" w="full" h="full" style={{ aspectRatio: "1" }}>
+            <Box bg={"white"} pos="relative" w="full" h="full" style={{ aspectRatio: "1" }} mb={6}>
               <Flex flexDir="column" justifyContent="center" h="full">
                 <Box>
                   <Image

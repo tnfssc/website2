@@ -56,7 +56,7 @@ const Skills: NextPageWithLayout = () => {
   return (
     <Center>
       <VStack w="full">
-        <Link href="/projects">
+        <Link href="/skills">
           <Heading>Skills</Heading>
         </Link>
         <VStack py="10">

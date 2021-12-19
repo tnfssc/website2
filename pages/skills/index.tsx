@@ -1,4 +1,4 @@
-import { Center, Heading, Icon, IconButton, VStack, Wrap, WrapItem } from "@chakra-ui/react";
+import { Center, Heading, Icon, IconButton, VStack, Wrap, WrapItem, Tooltip } from "@chakra-ui/react";
 import { NextPageWithLayout } from "_/global";
 import Link from "../../src/components/Link";
 
@@ -19,15 +19,17 @@ import {
 type SkillIconProps = { icon: React.FC; name: string; url: string };
 
 const SkillIcon: React.FC<SkillIconProps> = ({ icon, name, url }) => (
-  <IconButton
-    p="6"
-    bgColor="transparent"
-    w="44"
-    h="44"
-    icon={<Icon w="40" h="40" as={icon} />}
-    aria-label={name}
-    onClick={_ => window.open(url, "_blank", "noreferrer")}
-  />
+  <Tooltip label={name}>
+    <IconButton
+      p="6"
+      bgColor="transparent"
+      w="44"
+      h="44"
+      icon={<Icon w="40" h="40" as={icon} />}
+      aria-label={name}
+      onClick={_ => window.open(url, "_blank", "noreferrer")}
+    />
+  </Tooltip>
 );
 
 const languages: SkillIconProps[] = [

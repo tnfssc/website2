@@ -50,6 +50,22 @@ const projects: CardProps[] = [
     image: "/ocs-logo.png",
     imageAspectRatio: 1,
   },
+  {
+    title: "Campus Energy Monitoring System",
+    description: (
+      <>
+        <Text>CEMS is a system of devices that monitors the energy consumption throughout the campus.</Text>
+        <Text>
+          IoT devices that are spread all over the campus are connected to a central server. The server is responsible
+          for collecting the data from the devices and storing it in a database. The data is then used to generate
+          reports and various forms of visualizations.
+        </Text>
+        <Text>There is also a realtime dashboard that displays the realtime data.</Text>
+      </>
+    ),
+    image: "/cems-logo.png",
+    imageAspectRatio: 300 / 85,
+  },
 ];
 
 const Projects: NextPageWithLayout = () => {
@@ -59,7 +75,7 @@ const Projects: NextPageWithLayout = () => {
         <Link href="/projects">
           <Heading>Projects</Heading>
         </Link>
-        <Center pt="10">
+        <Center py="10">
           <Wrap spacing={6} justify="center">
             {projects.map(project => (
               <WrapItem key={project.title}>

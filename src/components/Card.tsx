@@ -46,7 +46,7 @@ export default function Card({
   return (
     <>
       <Box
-        maxW={"369px"}
+        maxW={"460px"}
         bg={colorModeValue("white", "gray.900")}
         boxShadow={"2xl"}
         rounded={"md"}
@@ -64,7 +64,7 @@ export default function Card({
           <Heading color={colorModeValue("gray.700", "white")} fontSize={"2xl"} fontFamily={"body"} {...titleProps}>
             {title}
           </Heading>
-          <Text mt="1" as="span" color={"gray.500"} maxH="10" overflow={"hidden"} {...descriptionProps}>
+          <Text mt="1" as="span" color={"gray.500"} maxH="12" overflow={"hidden"} {...descriptionProps}>
             {description}
           </Text>
           <Link mt="4" onClick={onOpen}>
@@ -72,14 +72,24 @@ export default function Card({
           </Link>
         </Box>
       </Box>
-      <Modal isOpen={isOpen} onClose={onClose}>
+      <Modal size="2xl" isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
-        <ModalContent>
+        <ModalContent maxW="90vw" w="540px">
           <ModalHeader {...titleProps}>{title}</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
-            <Box bg={"white"} pos="relative" w="full">
-              <Image src={image} layout={"responsive"} width={"100%"} height={"100%"} alt="img" />
+            <Box bg={"white"} pos="relative" w="full" h="full" style={{ aspectRatio: "1" }}>
+              <Flex flexDir="column" justifyContent="center" h="full">
+                <Box>
+                  <Image
+                    src={image}
+                    layout={"responsive"}
+                    width={"100%"}
+                    height={`${100 / imageAspectRatio}%`}
+                    alt="img"
+                  />
+                </Box>
+              </Flex>
             </Box>
             <Text as="span" overflow={"auto"} {...descriptionProps}>
               {description}

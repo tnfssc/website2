@@ -36,7 +36,7 @@ export const getServerSideProps: GetServerSideProps<{ quote: Response }> = async
 
 export default function Home({ quote }: InferGetServerSidePropsType<typeof getServerSideProps>) {
   return (
-    <VStack display="flex" flexDirection="column" justifyContent="center" height={MainHeight}>
+    <VStack display="flex" flexDirection="column" justifyContent="center">
       <Heading textAlign="center">{quote.content}</Heading>
       {quote.author && <Text>- {quote.author}</Text>}
     </VStack>

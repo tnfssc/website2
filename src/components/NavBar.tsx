@@ -68,7 +68,7 @@ const items: LIProps[] = [
   },
 ];
 
-export default function NavDrawer({}) {
+export default function NavDrawer() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = useRef<HTMLButtonElement | null>(null);
   return (

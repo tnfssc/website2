@@ -1,12 +1,11 @@
-import { Container } from "@chakra-ui/react";
+import { Container, Flex } from "@chakra-ui/react";
 import Head from "next/head";
-import { MainHeight } from "../constants";
 import Footer from "./Footer";
 import NavDrawer from "./NavBar";
 
 export default function Layout({ children }: { children: React.ReactNode }): React.ReactElement {
   return (
-    <>
+    <Flex flexDir="column" h="100vh">
       <Head>
         <title>Random site</title>
         <meta
@@ -16,12 +15,10 @@ export default function Layout({ children }: { children: React.ReactNode }): Rea
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <NavDrawer />
-      <main>
-        <Container maxW={"full"} minH={MainHeight}>
-          {children}
-        </Container>
-      </main>
+      <Flex as="main" flexGrow={1} flexDir="column" justifyContent="center">
+        <Container maxW={"full"}>{children}</Container>
+      </Flex>
       <Footer />
-    </>
+    </Flex>
   );
 }

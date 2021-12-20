@@ -69,7 +69,7 @@ export default function Footer() {
     <footer>
       <Box borderTop="1px" pt="5">
         <Center>
-          <Wrap spacing="5" justify="center">
+          <Wrap spacing="5" justify="center" maxW="80vw">
             {navItems.map(item => (
               <WrapItem key={item.label}>
                 <Link href={item.href}>{item.label}</Link>
@@ -80,7 +80,7 @@ export default function Footer() {
       </Box>
       <Box py="5">
         <Center>
-          <Wrap spacing={5} justify={"center"}>
+          <Wrap spacing={5} justify={"center"} maxW="80vw">
             {socialIcons.map(item => (
               <WrapItem key={item.href}>
                 <SocialIcon {...item} />

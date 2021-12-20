@@ -20,9 +20,53 @@ import { DarkModeSwitch } from "./DarkModeSwitch";
 import { MdSchool, MdSportsCricket, MdHome } from "react-icons/md";
 import { GiSkills } from "react-icons/gi";
 import Link from "./Link";
-import { FaProjectDiagram } from "react-icons/fa";
+import { FaProjectDiagram, FaIndustry } from "react-icons/fa";
 
 export const NavBarHeight = "56px";
+
+type LIProps = {
+  href: string;
+  name: string;
+  icon: React.FC;
+  onClick?: (..._: never) => void;
+};
+
+const LI: React.FC<LIProps> = ({ href, icon, name, onClick }) => (
+  <ListItem display="flex" alignItems="center" fontSize="2xl" py="1.5" onClick={onClick}>
+    <Link href={href}>
+      <ListIcon as={icon} w="7" h="7" />
+      {name}
+    </Link>
+  </ListItem>
+);
+
+const items: LIProps[] = [
+  {
+    href: "/projects",
+    name: "Projects",
+    icon: FaProjectDiagram,
+  },
+  {
+    href: "/experience",
+    name: "Experience",
+    icon: FaIndustry,
+  },
+  {
+    href: "/skills",
+    name: "Skills",
+    icon: GiSkills,
+  },
+  {
+    href: "/acads",
+    name: "Academics",
+    icon: MdSchool,
+  },
+  {
+    href: "/hobbies",
+    name: "Hobbies",
+    icon: MdSportsCricket,
+  },
+];
 
 export default function NavDrawer({}) {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -52,30 +96,9 @@ export default function NavDrawer({}) {
           </DrawerHeader>
           <DrawerBody>
             <List h="100%" display="flex" flexDirection="column">
-              <ListItem display="flex" alignItems="center" fontSize="2xl" py="1.5">
-                <Link href="/projects">
-                  <ListIcon as={FaProjectDiagram} w="7" h="7" />
-                  Projects
-                </Link>
-              </ListItem>
-              <ListItem display="flex" alignItems="center" fontSize="2xl" py="1.5">
-                <Link href="/skills">
-                  <ListIcon as={GiSkills} w="7" h="7" />
-                  Skills
-                </Link>
-              </ListItem>
-              <ListItem display="flex" alignItems="center" fontSize="2xl" py="1.5">
-                <Link href="/acads">
-                  <ListIcon as={MdSchool} w="7" h="7" />
-                  Academics
-                </Link>
-              </ListItem>
-              <ListItem display="flex" alignItems="center" fontSize="2xl" py="1.5">
-                <Link href="/hobbies">
-                  <ListIcon as={MdSportsCricket} w="7" h="7" />
-                  Hobbies
-                </Link>
-              </ListItem>
+              {items.map(item => (
+                <LI key={item.href} {...item} onClick={onClose} />
+              ))}
               <ListItem flexGrow={1} />
               <ListItem display="flex" alignItems="center" fontSize="xl" py="1.5">
                 <DarkModeSwitch />

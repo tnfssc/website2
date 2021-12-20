@@ -25,6 +25,7 @@ export default function Footer() {
         <Center>
           <HStack spacing="5" justifyContent="center">
             <Link href="/projects">Projects</Link>
+            <Link href="/experience">Experience</Link>
             <Link href="/skills">Skills</Link>
             <Link href="/acads">Academics</Link>
             <Link href="/hobbies">Hobbies</Link>

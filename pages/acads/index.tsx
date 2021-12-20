@@ -21,7 +21,7 @@ const Academics: NextPageWithLayout = () => {
           </ListItem>
           <ListItem alignItems="center" display="flex" fontSize="19" mb="5">
             <ListIcon as={FaUniversity} w="7" h="7" />
-            <Link href="http://www.velociity.co.in" isExternal>
+            <Link href="https://www.linkedin.com/school/velociity-junior-college/about" isExternal>
               <Text fontWeight="bold">VelocIITy Jr. College (defunct)</Text>
               &nbsp;(12th) - Physics, Chemistry and Math
             </Link>

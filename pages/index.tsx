@@ -1,5 +1,4 @@
 import { Heading, Text, VStack } from "@chakra-ui/react";
-import { MainHeight } from "../src/constants";
 import { GetServerSideProps, InferGetServerSidePropsType } from "next";
 
 type Response = {

@@ -14,8 +14,13 @@ export const UserProvider: React.FC<{ supabaseClient: SupabaseClient }> = ({ sup
     const { data: authListener } = supabaseClient.auth.onAuthStateChange(async (event, session) => {
       setSession(session);
       setUser(session?.user ?? null);
+      fetch("/api/auth", {
+        method: "POST",
+        headers: new Headers({ "Content-Type": "application/json" }),
+        credentials: "same-origin",
+        body: JSON.stringify({ event, session }),
+      }).then(res => res.json());
     });
-
     return () => {
       authListener?.unsubscribe();
     };

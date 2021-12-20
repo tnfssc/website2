@@ -6,7 +6,7 @@ import type { AppProps } from "next/app";
 import { ChakraProvider } from "@chakra-ui/react";
 import Layout from "../src/components/Layout";
 import theme from "../src/theme";
-import { SWRConfig } from "swr";
+import { BareFetcher, SWRConfig } from "swr";
 import { UserProvider } from "../src/contexts/user";
 import supabase from "../src/initSupabase";
 
@@ -20,6 +20,13 @@ type AppPropsWithLayout = AppProps & {
 
 const createLayout = (page: ReactElement) => <Layout>{page}</Layout>;
 
+const fetcher: BareFetcher = (url: string, token?: string) =>
+  fetch(url, {
+    method: "GET",
+    headers: token ? new Headers({ "Content-Type": "application/json", token }) : undefined,
+    credentials: "same-origin",
+  }).then(res => res.json());
+
 export default function MyApp({ Component, pageProps }: AppPropsWithLayout) {
   const getLayout = Component.getLayout ?? createLayout;
   return (
@@ -27,7 +34,7 @@ export default function MyApp({ Component, pageProps }: AppPropsWithLayout) {
       <UserProvider supabaseClient={supabase}>
         <SWRConfig
           value={{
-            fetcher: (resource, init) => fetch(resource, init).then(res => res.json()),
+            fetcher,
             refreshInterval: 30000,
           }}>
           {getLayout(<Component {...pageProps} />)}

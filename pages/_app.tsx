@@ -7,6 +7,8 @@ import { ChakraProvider } from "@chakra-ui/react";
 import Layout from "../src/components/Layout";
 import theme from "../src/theme";
 import { SWRConfig } from "swr";
+import { UserProvider } from "../src/contexts/user";
+import supabase from "../src/initSupabase";
 
 type NextPageWithLayout = NextPage & {
   getLayout?: (page: ReactElement) => ReactNode;
@@ -22,13 +24,15 @@ export default function MyApp({ Component, pageProps }: AppPropsWithLayout) {
   const getLayout = Component.getLayout ?? createLayout;
   return (
     <ChakraProvider resetCSS theme={theme}>
-      <SWRConfig
-        value={{
-          fetcher: (resource, init) => fetch(resource, init).then(res => res.json()),
-          refreshInterval: 30000,
-        }}>
-        {getLayout(<Component {...pageProps} />)}
-      </SWRConfig>
+      <UserProvider supabaseClient={supabase}>
+        <SWRConfig
+          value={{
+            fetcher: (resource, init) => fetch(resource, init).then(res => res.json()),
+            refreshInterval: 30000,
+          }}>
+          {getLayout(<Component {...pageProps} />)}
+        </SWRConfig>
+      </UserProvider>
     </ChakraProvider>
   );
 }

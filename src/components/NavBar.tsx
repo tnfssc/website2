@@ -21,6 +21,7 @@ import { MdSchool, MdSportsCricket, MdHome } from "react-icons/md";
 import { GiSkills } from "react-icons/gi";
 import Link from "./Link";
 import { FaProjectDiagram, FaIndustry } from "react-icons/fa";
+import AuthButton from "./Auth";
 
 export const NavBarHeight = "56px";
 
@@ -100,6 +101,9 @@ export default function NavDrawer() {
                 <LI key={item.href} {...item} onClick={onClose} />
               ))}
               <ListItem flexGrow={1} />
+              <ListItem py="4">
+                <AuthButton />
+              </ListItem>
               <ListItem display="flex" alignItems="center" fontSize="xl" py="1.5">
                 <DarkModeSwitch />
                 <Text pl="2">Dark mode</Text>

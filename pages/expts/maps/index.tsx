@@ -15,8 +15,7 @@ const render = (status: Status) => {
   }
 };
 
-const GoogleMapsApiKey = process.env.GOOGLE_MAPS_API_KEY || "AIzaSyCNkbaUQ49AeNfiisnATf1UlrDixfyPk40";
-// const GoogleMapsApiKey = "";
+const GoogleMapsApiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY || "AIzaSyCNkbaUQ49AeNfiisnATf1UlrDixfyPk40";
 
 const MyApp = () => <Wrapper apiKey={GoogleMapsApiKey} render={render} />;
 function MyMapComponent({

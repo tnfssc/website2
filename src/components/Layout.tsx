@@ -19,7 +19,7 @@ export default function Layout({ children }: { children: React.ReactNode }): Rea
       </Head>
       <NavDrawer />
       <Flex as="main" flexGrow={1} flexDir="column" justifyContent="center">
-        <Container maxW={"full"}>{children}</Container>
+        <Container maxW="full">{children}</Container>
       </Flex>
       <Footer />
     </Flex>

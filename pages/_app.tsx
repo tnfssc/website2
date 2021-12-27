@@ -1,4 +1,5 @@
 import "../styles/globals.css";
+import "normalize.css";
 
 import type { ReactElement, ReactNode } from "react";
 import type { NextPage } from "next";
@@ -9,6 +10,9 @@ import theme from "../src/theme";
 import { BareFetcher, SWRConfig } from "swr";
 import { UserProvider } from "../src/contexts/user";
 import supabase from "../src/initSupabase";
+
+import { AnimatePresence, domAnimation, LazyMotion, m } from "framer-motion";
+import { animations } from "../src/lib/animations";
 
 type NextPageWithLayout = NextPage & {
   getLayout?: (page: ReactElement) => ReactNode;
@@ -27,8 +31,9 @@ const fetcher: BareFetcher = (url: string, token?: string) =>
     credentials: "same-origin",
   }).then(res => res.json());
 
-export default function MyApp({ Component, pageProps }: AppPropsWithLayout) {
+export default function MyApp({ Component, pageProps, router }: AppPropsWithLayout) {
   const getLayout = Component.getLayout ?? createLayout;
+  const animation = animations[2];
   return (
     <ChakraProvider resetCSS theme={theme}>
       <UserProvider supabaseClient={supabase}>
@@ -37,7 +42,22 @@ export default function MyApp({ Component, pageProps }: AppPropsWithLayout) {
             fetcher,
             refreshInterval: 30000,
           }}>
-          {getLayout(<Component {...pageProps} />)}
+          {getLayout(
+            <LazyMotion features={domAnimation}>
+              <AnimatePresence exitBeforeEnter>
+                <m.div
+                  key={router.route.concat(animation.name)}
+                  className="page-wrap"
+                  initial="initial"
+                  animate="animate"
+                  exit="exit"
+                  variants={animation.variants}
+                  transition={animation.transition}>
+                  <Component {...pageProps} />
+                </m.div>
+              </AnimatePresence>
+            </LazyMotion>
+          )}
         </SWRConfig>
       </UserProvider>
     </ChakraProvider>

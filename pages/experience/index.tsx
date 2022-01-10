@@ -16,7 +16,7 @@ const experiences: CardProps[] = [
         </Text>
         <Text>It is a startup by IITH alumni. Now serving over 1 million videos and over 500 thousand downloads.</Text>
         <Text>
-          As a Full Developer Intern at StoryXpress, I worked on the frontend and backend of their flagship application.
+          As a Full Stack Developer Intern at StoryXpress, I worked on the frontend and backend of their flagship application.
           I also worked on their internal dashboard. Learnt a lot about teamwork and company environment.
         </Text>
       </>

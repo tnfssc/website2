@@ -30,6 +30,7 @@ const projects: CardProps[] = [
     ),
     image: "/c19-logo.png",
     imageAspectRatio: 300 / 116,
+    link: "https://covid19tracker.in",
   },
   {
     title: "Office of Career Services",
@@ -49,6 +50,7 @@ const projects: CardProps[] = [
     ),
     image: "/ocs-logo.png",
     imageAspectRatio: 1,
+    link: "https://ocs.iith.ac.in",
   },
   {
     title: "Campus Energy Monitoring System",
@@ -65,6 +67,7 @@ const projects: CardProps[] = [
     ),
     image: "/cems-logo.png",
     imageAspectRatio: 300 / 85,
+    link: "https://cems.iith.ac.in",
   },
 ];
 

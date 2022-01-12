@@ -3,12 +3,10 @@ import {
   Box,
   Heading,
   Text,
-  Stack,
   useColorModeValue as colorModeValue,
   HeadingProps,
   TextProps,
   BoxProps,
-  Button,
   useDisclosure,
   Modal,
   ModalOverlay,
@@ -17,9 +15,11 @@ import {
   ModalCloseButton,
   ModalBody,
   ModalFooter,
-  Link,
   Flex,
+  Link as ChakraLink,
 } from "@chakra-ui/react";
+
+import Link from "./Link";
 
 export type CardProps = Partial<{
   title: string;
@@ -62,14 +62,16 @@ export default function Card({
         </Box>
         <Box display={"flex"} flexDirection={"column"} justifyContent={"space-between"} flexGrow={1} mt={6}>
           <Heading color={colorModeValue("gray.700", "white")} fontSize={"2xl"} fontFamily={"body"} {...titleProps}>
-            {title}
+            <Link href={link} target="_blank" rel="noreferer">
+              {title}
+            </Link>
           </Heading>
           <Text mt="1" as="span" color={"gray.500"} maxH="12" overflow={"hidden"} {...descriptionProps}>
             {description}
           </Text>
-          <Link mt="4" onClick={onOpen}>
+          <ChakraLink mt="4" onClick={onOpen}>
             Read more
-          </Link>
+          </ChakraLink>
         </Box>
       </Box>
       <Modal size="2xl" isOpen={isOpen} onClose={onClose}>

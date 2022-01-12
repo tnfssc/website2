@@ -69,6 +69,21 @@ const projects: CardProps[] = [
     imageAspectRatio: 300 / 85,
     link: "https://cems.iith.ac.in",
   },
+  {
+    title: "X (Currently working on)",
+    description: (
+      <>
+        <Text fontStyle="italic">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut magnam officia voluptatibus natus, recusandae quis
+          omnis iusto voluptatum labore perferendis voluptatem, nesciunt adipisci, tempore suscipit ipsum. Aut similique
+          expedita quos.
+        </Text>
+      </>
+    ),
+    image: "/xlogo.png",
+    imageAspectRatio: 300 / 300,
+    link: "https://x.tnfssc.cf/",
+  },
 ];
 
 const Projects: NextPageWithLayout = () => {

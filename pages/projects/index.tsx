@@ -70,13 +70,11 @@ const projects: CardProps[] = [
     link: "https://cems.iith.ac.in",
   },
   {
-    title: "X (Currently working on)",
+    title: "Directions and Navigation",
     description: (
       <>
         <Text fontStyle="italic">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut magnam officia voluptatibus natus, recusandae quis
-          omnis iusto voluptatum labore perferendis voluptatem, nesciunt adipisci, tempore suscipit ipsum. Aut similique
-          expedita quos.
+          Google Maps with Directions and current position. You can use this to navigate around the world.
         </Text>
       </>
     ),

@@ -78,10 +78,10 @@ export default function NavDrawer() {
         <Box p="2" display="flex" justifyContent="space-between" alignItems="center">
           <Box>
             <Link href="/" onClick={onClose}>
-              <IconButton aria-label="home" icon={<Icon as={MdHome} w="7" h="7" />} />
+              <IconButton variant="ghost" aria-label="home" icon={<Icon as={MdHome} w="7" h="7" />} />
             </Link>
           </Box>
-          <IconButton aria-label="open-drawer" ref={r => (btnRef.current = r)} onClick={onOpen}>
+          <IconButton variant="ghost" aria-label="open-drawer" ref={r => (btnRef.current = r)} onClick={onOpen}>
             <HamburgerIcon />
           </IconButton>
         </Box>

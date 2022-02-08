@@ -80,7 +80,7 @@ const projects: CardProps[] = [
     ),
     image: "/xlogo.png",
     imageAspectRatio: 300 / 300,
-    link: "https://x.tnfssc.cf/",
+    link: "https://x.tnfssc.vercel.app/",
   },
 ];
 

@@ -1,6 +1,6 @@
 {
-  "name": "tnfssc.cf",
-  "short_name": "tnfssc.cf",
+  "name": "tnfssc",
+  "short_name": "tnfssc",
   "display": "standalone",
   "orientation": "portrait",
   "theme_color": "#000000",
@@ -8,7 +8,6 @@
   "start_url": "..",
   "icons": [
     { "src": "/icons/dark/android-chrome-192x192.png", "sizes": "192x192", "type": "image/png" },
-    { "src": "/icons/dark/android-chrome-512x512.png", "sizes": "512x512", "type": "image/png" },
     { "src": "/icons/dark/android-chrome-512x512.png", "sizes": "512x512", "type": "image/png" },
     {
       "src": "/icons/maskable/maskable_icon_x192.png",

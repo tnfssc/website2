@@ -53,8 +53,37 @@ const Hobbies: NextPageWithLayout = () => {
             <AccordionPanel pb={4}>
               <List>
                 <ListItem>Minecraft - Redstone Engineer</ListItem>
-                <ListItem>Forza Horizon - Casual</ListItem>
-                <ListItem>A lot of indie titles like INSIDE, Limbo, The Room, Vector, Little Nightmares etc</ListItem>
+                <ListItem>
+                  A lot of indie titles like{" "}
+                  <Link href="https://playdead.com/games/inside/" isExternal>
+                    INSIDE
+                  </Link>
+                  ,{" "}
+                  <Link href="https://playdead.com/games/limbo/" isExternal>
+                    Limbo
+                  </Link>
+                  ,{" "}
+                  <Link href="https://www.fireproofgames.com/games/the-room" isExternal>
+                    The Room
+                  </Link>
+                  ,{" "}
+                  <Link href="https://nekki.com/vector/" isExternal>
+                    Vector
+                  </Link>
+                  ,{" "}
+                  <Link href="https://en.bandainamcoent.eu/little-nightmares" isExternal>
+                    Little Nightmares
+                  </Link>
+                  ,{" "}
+                  <Link href="https://plugplay.ch/" isExternal>
+                    Plug&Play
+                  </Link>
+                  ,{" "}
+                  <Link href="https://playkids.ch/" isExternal>
+                    Kids
+                  </Link>{" "}
+                  etc
+                </ListItem>
               </List>
             </AccordionPanel>
           </AccordionItem>

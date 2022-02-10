@@ -70,6 +70,23 @@ const projects: CardProps[] = [
     link: "https://cems.iith.ac.in",
   },
   {
+    title: "Powersense",
+    description: (
+      <>
+        <Text fontStyle="italic">
+          Powersense is ed-tech startup that aims to provide a platform for students to learn about the power. It was
+          founded by{" "}
+          <Link isExternal href="https://www.iith.ac.in/ee/ypradeep/">
+            Pradeep Yemula.
+          </Link>
+        </Text>
+      </>
+    ),
+    image: "/xlogo.png",
+    imageAspectRatio: 300 / 300,
+    link: "https://powersense.tnfssc.vercel.app/",
+  },
+  {
     title: "Directions and Navigation",
     description: (
       <>
@@ -78,8 +95,8 @@ const projects: CardProps[] = [
         </Text>
       </>
     ),
-    image: "/xlogo.png",
-    imageAspectRatio: 300 / 300,
+    image: "/nav.jpg",
+    imageAspectRatio: 900 / 900,
     link: "https://x.tnfssc.vercel.app/",
   },
 ];

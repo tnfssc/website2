@@ -77,7 +77,11 @@ export default function Card({
       <Modal size="2xl" isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
         <ModalContent maxW="90vw" w="540px">
-          <ModalHeader {...titleProps}>{title}</ModalHeader>
+          <ModalHeader {...titleProps}>
+            <Link href={link} target="_blank" rel="noreferer">
+              {title}
+            </Link>
+          </ModalHeader>
           <ModalCloseButton />
           <ModalBody>
             <Box bg={"white"} pos="relative" w="full" h="full" style={{ aspectRatio: "1" }} mb={6}>

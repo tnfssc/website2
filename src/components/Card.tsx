@@ -19,7 +19,10 @@ import {
   Link as ChakraLink,
 } from "@chakra-ui/react";
 
+import { motion } from "framer-motion";
+
 import Link from "./Link";
+import { useRouter } from "next/router";
 
 export type CardProps = Partial<{
   title: string;
@@ -43,6 +46,7 @@ export default function Card({
   ...props
 }: CardProps) {
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const router = useRouter();
   return (
     <>
       <Box
@@ -53,13 +57,27 @@ export default function Card({
         p={6}
         overflow={"auto"}
         {...props}>
-        <Box bg={"white"} pos="relative" w="full" h="full" style={{ aspectRatio: "1" }}>
-          <Flex flexDir="column" justifyContent="center" h="full">
-            <Box>
-              <Image src={image} layout={"responsive"} width={"100%"} height={`${100 / imageAspectRatio}%`} alt="img" />
-            </Box>
-          </Flex>
-        </Box>
+        <motion.div whileHover={{ scale: 1.06 }}>
+          <Box
+            bg={"white"}
+            pos="relative"
+            w="full"
+            h="full"
+            style={{ aspectRatio: "1", cursor: "pointer" }}
+            onClick={() => router.push(link)}>
+            <Flex flexDir="column" justifyContent="center" h="full">
+              <Box>
+                <Image
+                  src={image}
+                  layout={"responsive"}
+                  width={"100%"}
+                  height={`${100 / imageAspectRatio}%`}
+                  alt="img"
+                />
+              </Box>
+            </Flex>
+          </Box>
+        </motion.div>
         <Box display={"flex"} flexDirection={"column"} justifyContent={"space-between"} flexGrow={1} mt={6}>
           <Heading color={colorModeValue("gray.700", "white")} fontSize={"2xl"} fontFamily={"body"} {...titleProps}>
             <Link href={link} target="_blank" rel="noreferer">

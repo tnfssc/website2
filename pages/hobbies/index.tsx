@@ -16,6 +16,65 @@ import { MdOpenInNew } from "react-icons/md";
 import { NextPageWithLayout } from "_/global";
 import Link from "../../src/components/Link";
 
+const ListItemLink = ({ href, text }: { href: string; text: string }) => (
+  <ListItem>
+    <Link href={href} isExternal>
+      {text}
+    </Link>
+  </ListItem>
+);
+
+const videoGames = [
+  {
+    text: "Minecraft",
+    href: "https://minecraft.net/en-us/",
+  },
+  {
+    text: "No Man's Sky",
+    href: "https://www.nomanssky.com/",
+  },
+  {
+    text: "INSIDE",
+    href: "https://playdead.com/games/inside/",
+  },
+  {
+    text: "Limbo",
+    href: "https://playdead.com/games/limbo/",
+  },
+  {
+    text: "The Room",
+    href: "https://www.fireproofgames.com/games/the-room/",
+  },
+  {
+    text: "Vector",
+    href: "https://nekki.com/vector/",
+  },
+  {
+    text: "Little Nightmares",
+    href: "https://en.bandainamcoent.eu/little-nightmares/",
+  },
+  {
+    text: "Plug&Play",
+    href: "https://plugplay.ch/",
+  },
+  {
+    text: "Kids",
+    href: "https://playkids.ch/",
+  },
+  {
+    text: "Poppy Playtime",
+    href: "https://poppyplaytimegame.io/",
+  },
+  {
+    text: "CS:GO",
+    href: "https://www.counter-strike.net/",
+  },
+  {
+    text: "Valorant",
+    href: "https://www.playvalorant.com/",
+  },
+];
+
 const Hobbies: NextPageWithLayout = () => {
   return (
     <Center>
@@ -23,20 +82,22 @@ const Hobbies: NextPageWithLayout = () => {
         <Link href="/hobbies">
           <Heading>Hobbies</Heading>
         </Link>
-        <Accordion defaultIndex={[0, 1, 2]} allowMultiple>
+        <Accordion allowMultiple>
           <AccordionItem>
             <Heading>
               <AccordionButton>
                 <Box flex="1" textAlign="left" fontWeight="bold" fontSize="lg">
-                  E-Sports
+                  Video Games&nbsp;&nbsp;
                 </Box>
                 <AccordionIcon />
               </AccordionButton>
             </Heading>
             <AccordionPanel pb={4}>
               <List>
-                <ListItem>CS:GO - Distinguished Master Guardian</ListItem>
-                <ListItem>Valorant - Gold 1</ListItem>
+                {videoGames.map(game => (
+                  <ListItemLink key={game.text} {...game} />
+                ))}
+                <ListItem>and more</ListItem>
               </List>
             </AccordionPanel>
           </AccordionItem>
@@ -45,45 +106,18 @@ const Hobbies: NextPageWithLayout = () => {
             <Heading>
               <AccordionButton>
                 <Box flex="1" textAlign="left" fontWeight="bold" fontSize="lg">
-                  Video Games
+                  Anime
                 </Box>
                 <AccordionIcon />
               </AccordionButton>
             </Heading>
             <AccordionPanel pb={4}>
               <List>
-                <ListItem>Minecraft - Redstone Engineer</ListItem>
-                <ListItem>
-                  A lot of indie titles like{" "}
-                  <Link href="https://playdead.com/games/inside/" isExternal>
-                    INSIDE
-                  </Link>
-                  ,{" "}
-                  <Link href="https://playdead.com/games/limbo/" isExternal>
-                    Limbo
-                  </Link>
-                  ,{" "}
-                  <Link href="https://www.fireproofgames.com/games/the-room" isExternal>
-                    The Room
-                  </Link>
-                  ,{" "}
-                  <Link href="https://nekki.com/vector/" isExternal>
-                    Vector
-                  </Link>
-                  ,{" "}
-                  <Link href="https://en.bandainamcoent.eu/little-nightmares" isExternal>
-                    Little Nightmares
-                  </Link>
-                  ,{" "}
-                  <Link href="https://plugplay.ch/" isExternal>
-                    Plug&Play
-                  </Link>
-                  ,{" "}
-                  <Link href="https://playkids.ch/" isExternal>
-                    Kids
-                  </Link>{" "}
-                  etc
-                </ListItem>
+                <ListItem>Assassination Classroom</ListItem>
+                <ListItem>Steins;Gate</ListItem>
+                <ListItem>Death Note</ListItem>
+                <ListItem>Naruto</ListItem>
+                <ListItem>and more</ListItem>
               </List>
             </AccordionPanel>
           </AccordionItem>
@@ -92,15 +126,33 @@ const Hobbies: NextPageWithLayout = () => {
             <Heading>
               <AccordionButton>
                 <Box flex="1" textAlign="left" fontWeight="bold" fontSize="lg">
-                  Others
+                  Netflix
                 </Box>
                 <AccordionIcon />
               </AccordionButton>
             </Heading>
             <AccordionPanel pb={4}>
               <List>
-                <ListItem>Netflix - Black Mirror, Lucifer, Stranger Things etc</ListItem>
-                <ListItem>Anime - Assassination Classroom, Steins;Gate, Death Note, Naruto etc</ListItem>
+                <ListItem>Black Mirror</ListItem>
+                <ListItem>Lucifer</ListItem>
+                <ListItem>Stranger Things</ListItem>
+                <ListItem>Marvel stuff</ListItem>
+                <ListItem>and more</ListItem>
+              </List>
+            </AccordionPanel>
+          </AccordionItem>
+
+          <AccordionItem>
+            <Heading>
+              <AccordionButton>
+                <Box flex="1" textAlign="left" fontWeight="bold" fontSize="lg">
+                  Chill
+                </Box>
+                <AccordionIcon />
+              </AccordionButton>
+            </Heading>
+            <AccordionPanel pb={4}>
+              <List>
                 <ListItem>
                   Music -{" "}
                   <Link href="https://open.spotify.com/playlist/2hSgezIlZR5WZFAgAXXggd" isExternal>
@@ -108,9 +160,8 @@ const Hobbies: NextPageWithLayout = () => {
                     <ListIcon as={MdOpenInNew} ml="1" h="4" />
                   </Link>
                 </ListItem>
-                <ListItem>Cycling - Casual</ListItem>
                 <ListItem>Web surfing</ListItem>
-                <ListItem>Production - Newbie</ListItem>
+                <ListItem>Multimedia production</ListItem>
               </List>
             </AccordionPanel>
           </AccordionItem>

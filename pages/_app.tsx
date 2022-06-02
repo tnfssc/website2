@@ -1,10 +1,13 @@
+import "../styles/nprogress.css";
 import "../styles/globals.css";
 import "normalize.css";
 
 import type { ReactElement, ReactNode } from "react";
 import type { NextPage } from "next";
 import type { AppProps } from "next/app";
+import Router from "next/router";
 import { ChakraProvider } from "@chakra-ui/react";
+import nProgress from "nprogress";
 import Layout from "../src/components/Layout";
 import theme from "../src/theme";
 import { BareFetcher, SWRConfig } from "swr";
@@ -30,6 +33,13 @@ const fetcher: BareFetcher = (url: string, token?: string) =>
     headers: token ? new Headers({ "Content-Type": "application/json", token }) : undefined,
     credentials: "same-origin",
   }).then(res => res.json());
+
+const handleStart = (url: string) => url !== Router.asPath && nProgress.start();
+const handleComplete = (url: string) => url === Router.asPath && nProgress.done();
+
+Router.events.on("routeChangeStart", handleStart);
+Router.events.on("routeChangeComplete", handleComplete);
+Router.events.on("routeChangeError", handleComplete);
 
 export default function MyApp({ Component, pageProps, router }: AppPropsWithLayout) {
   const getLayout = Component.getLayout ?? createLayout;

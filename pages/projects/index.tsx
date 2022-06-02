@@ -33,6 +33,20 @@ const projects: CardProps[] = [
     link: "https://covid19tracker.in",
   },
   {
+    title: "htOS - Hostel Management System",
+    description: (
+      <>
+        <Text fontStyle="italic">
+          A hostel management system for students of IITH. This handles room accommodation, vacation etc., along with
+          showing of the various live stats regarding the hostels.
+        </Text>
+      </>
+    ),
+    image: "/htOS.png",
+    imageAspectRatio: 289 / 289,
+    link: "https://htos.iith.ac.in",
+  },
+  {
     title: "Office of Career Services",
     description: (
       <>

@@ -25,7 +25,7 @@ import Link from "./Link";
 import { useRouter } from "next/router";
 
 export type CardProps = Partial<{
-  title: string;
+  title: JSX.Element;
   titleProps: HeadingProps;
   description: React.ReactNode;
   descriptionProps: TextProps;
@@ -33,7 +33,7 @@ export type CardProps = Partial<{
   imageAspectRatio: number;
   link: string;
 }> &
-  BoxProps;
+  Omit<BoxProps, "title">;
 
 export default function Card({
   title,

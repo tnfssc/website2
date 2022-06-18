@@ -25,7 +25,7 @@ import Link from "./Link";
 import { useRouter } from "next/router";
 
 export type CardProps = Partial<{
-  title: JSX.Element;
+  title: JSX.Element | string;
   titleProps: HeadingProps;
   description: React.ReactNode;
   descriptionProps: TextProps;

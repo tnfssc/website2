@@ -4,6 +4,7 @@ import { LineLayer } from "@deck.gl/layers";
 import DeckGL from "@deck.gl/react";
 import { useMemo } from "react";
 import { StaticMap } from "react-map-gl";
+// @ts-expect-error
 import { MapboxLayer as DeckGLLayer } from "@deck.gl/mapbox";
 import { InitialViewStateProps } from "@deck.gl/core/lib/deck";
 

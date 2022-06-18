@@ -125,7 +125,7 @@ const Projects: NextPageWithLayout = () => {
         <Center py="10">
           <Wrap spacing={6} justify="center">
             {projects.map(project => (
-              <WrapItem key={project.title}>
+              <WrapItem key={project.image}>
                 <Card {...project} />
               </WrapItem>
             ))}

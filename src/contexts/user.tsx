@@ -1,9 +1,12 @@
 import { User, Session, SupabaseClient } from "@supabase/supabase-js";
-import { createContext, useContext, useEffect, useState } from "react";
+import { createContext, ReactNode, useContext, useEffect, useState } from "react";
 
 export const UserContext = createContext<{ user: User | null; session: Session | null }>({ user: null, session: null });
 
-export const UserProvider: React.FC<{ supabaseClient: SupabaseClient }> = ({ supabaseClient, children }) => {
+export const UserProvider: React.FC<{ supabaseClient: SupabaseClient; children: ReactNode }> = ({
+  supabaseClient,
+  children,
+}) => {
   const [user, setUser] = useState<User | null>(null);
   const [session, setSession] = useState<Session | null>(null);
 

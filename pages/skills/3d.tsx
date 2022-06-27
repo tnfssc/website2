@@ -16,7 +16,6 @@ const Skills: NextPageWithLayout = () => {
           <Link href="/skills">
             <Heading>Skills</Heading>
           </Link>
-          <Link href="/skills/beta">(checkout the beta)</Link>
         </HStack>
         <VStack py="10">{icons ? <Cloud>{icons}</Cloud> : <div>Loading...</div>}</VStack>
       </VStack>

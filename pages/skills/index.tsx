@@ -31,7 +31,7 @@ const Skills: NextPageWithLayout = () => {
           <Link href="/skills">
             <Heading>Skills</Heading>
           </Link>
-          checkout the <Link href="/skills/beta">beta</Link>, <Link href="/skills/beta">3d</Link>
+          checkout the <Link href="/skills/beta">beta</Link>, <Link href="/skills/3d">3d</Link>
         </HStack>
         <VStack py="10">
           <Wrap spacing={6} justify="center">

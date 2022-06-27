@@ -1,4 +1,4 @@
-import { Center, Heading, Icon, IconButton, VStack, Wrap, WrapItem, Tooltip } from "@chakra-ui/react";
+import { Center, Heading, Icon, IconButton, VStack, Wrap, WrapItem, Tooltip, HStack } from "@chakra-ui/react";
 import { NextPageWithLayout } from "_/global";
 import Link from "../../src/components/Link";
 import { motion } from "framer-motion";
@@ -103,9 +103,12 @@ const Skills: NextPageWithLayout = () => {
   return (
     <Center>
       <VStack w="full">
-        <Link href="/skills">
-          <Heading>Skills</Heading>
-        </Link>
+        <HStack>
+          <Link href="/skills">
+            <Heading>Skills</Heading>
+          </Link>
+          <Link href="/skills/beta">(checkout the beta)</Link>
+        </HStack>
         <VStack py="10">
           <Wrap spacing={6} justify="center">
             {skills.map((skill, i) => (

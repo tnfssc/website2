@@ -11,7 +11,7 @@ export const useIconCloud = (slugs: Array<{ slug: string; url: string }>) => {
     return Object.values(icons.simpleIcons).map(icon =>
       renderSimpleIcon({
         icon,
-        size: 150,
+        size: 199,
         aProps: {
           target: "_blank",
           rel: "noopener noreferrer",

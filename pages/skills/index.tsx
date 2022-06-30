@@ -1,29 +1,14 @@
-import { Center, Heading, Icon, IconButton, VStack, Wrap, WrapItem, Tooltip, HStack } from "@chakra-ui/react";
+import { Center, Heading, VStack, HStack } from "@chakra-ui/react";
 import { NextPageWithLayout } from "_/global";
 import Link from "../../src/components/Link";
-import { motion } from "framer-motion";
-
+import { Cloud } from "react-icon-cloud";
 import { skills } from "../../src/data/skills";
+import { useIconCloud } from "../../src/hooks/useIconCloud";
 
-type SkillIconProps = { icon: React.FC; name: string; url: string };
-
-const SkillIcon: React.FC<SkillIconProps> = ({ icon, name, url }) => (
-  <motion.span whileHover={{ scale: 1.06 }}>
-    <Tooltip label={name}>
-      <IconButton
-        p="6"
-        bgColor="transparent"
-        w="44"
-        h="44"
-        icon={<Icon w="40" h="40" as={icon} />}
-        aria-label={name}
-        onClick={_ => window.open(url, "_blank", "noreferrer")}
-      />
-    </Tooltip>
-  </motion.span>
-);
+const slugs = skills.map(skill => ({ slug: skill.slug, url: skill.url }));
 
 const Skills: NextPageWithLayout = () => {
+  const icons = useIconCloud(slugs);
   return (
     <Center>
       <VStack w="full">
@@ -31,17 +16,8 @@ const Skills: NextPageWithLayout = () => {
           <Link href="/skills">
             <Heading>Skills</Heading>
           </Link>
-          checkout the <Link href="/skills/beta">beta</Link>, <Link href="/skills/3d">3d</Link>
         </HStack>
-        <VStack py="10">
-          <Wrap spacing={6} justify="center">
-            {skills.map((skill, i) => (
-              <WrapItem key={skill.name}>
-                <SkillIcon {...skill} />
-              </WrapItem>
-            ))}
-          </Wrap>
-        </VStack>
+        <VStack py="10">{icons ? <Cloud>{icons}</Cloud> : <div>Loading...</div>}</VStack>
       </VStack>
     </Center>
   );

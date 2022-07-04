@@ -38,7 +38,10 @@ const projects: CardProps[] = [
       <>
         <Text fontStyle="italic">
           A hostel management system for students of IITH. This handles room accommodation, vacation etc., along with
-          showing of the various live stats regarding the hostels.
+          showing of the various live stats regarding the hostels. Checkout the demo server at{" "}
+          <Link isExternal href="https://admin.htos.sharath.co.in/">
+            https://admin.htos.sharath.co.in/
+          </Link>
         </Text>
       </>
     ),

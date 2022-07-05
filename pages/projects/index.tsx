@@ -36,7 +36,7 @@ const projects: CardProps[] = [
     title: "htOS - Hostel Management System",
     description: (
       <>
-        <Text fontStyle="italic">
+        <Text>
           A hostel management system for students of IITH. This handles room accommodation, vacation etc., along with
           showing of the various live stats regarding the hostels. Checkout the demo server at{" "}
           <Link isExternal href="https://admin.htos.sharath.co.in/">
@@ -90,7 +90,7 @@ const projects: CardProps[] = [
     title: "Powersense",
     description: (
       <>
-        <Text fontStyle="italic">
+        <Text>
           Powersense is ed-tech startup that aims to provide a platform for students to learn about the power. It was
           founded by{" "}
           <Link isExternal href="https://www.iith.ac.in/ee/ypradeep/">
@@ -107,9 +107,7 @@ const projects: CardProps[] = [
     title: "Directions and Navigation",
     description: (
       <>
-        <Text fontStyle="italic">
-          Google Maps with Directions and current position. You can use this to navigate around the world.
-        </Text>
+        <Text>Google Maps with Directions and current position. You can use this to navigate around the world.</Text>
       </>
     ),
     image: "/nav.jpg",

@@ -21,6 +21,7 @@ import { MdSchool, MdSportsCricket, MdHome } from "react-icons/md";
 import { GiSkills } from "react-icons/gi";
 import Link from "./Link";
 import { FaProjectDiagram, FaIndustry } from "react-icons/fa";
+import { GrHost } from "react-icons/gr";
 import AuthButton from "./Auth";
 
 export const NavBarHeight = "56px";
@@ -43,14 +44,19 @@ const LI: React.FC<LIProps> = ({ href, icon, name, onClick }) => (
 
 const items: LIProps[] = [
   {
-    href: "/projects",
-    name: "Projects",
-    icon: FaProjectDiagram,
-  },
-  {
     href: "/experience",
     name: "Experience",
     icon: FaIndustry,
+  },
+  {
+    href: "/self-hosted",
+    name: "Self Hosted",
+    icon: GrHost,
+  },
+  {
+    href: "/projects",
+    name: "Projects",
+    icon: FaProjectDiagram,
   },
   {
     href: "/skills",

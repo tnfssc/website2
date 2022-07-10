@@ -20,24 +20,28 @@ export const FooterHeight = "133.5px";
 
 const navItems: { label: string; href: string }[] = [
   {
-    label: "Projects",
-    href: "/projects",
-  },
-  {
-    label: "Experience",
     href: "/experience",
+    label: "Experience",
   },
   {
-    label: "Skills",
+    href: "/self-hosted",
+    label: "Self Hosted",
+  },
+  {
+    href: "/projects",
+    label: "Projects",
+  },
+  {
     href: "/skills",
+    label: "Skills",
   },
   {
-    label: "Academics",
     href: "/acads",
+    label: "Academics",
   },
   {
-    label: "Hobbies",
     href: "/hobbies",
+    label: "Hobbies",
   },
 ];
 

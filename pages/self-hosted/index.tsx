@@ -15,6 +15,17 @@ const selfHosted: CardProps[] = [
     imageAspectRatio: 200 / 200,
     link: "https://search.sharath.co.in/",
   },
+  {
+    title: "LibReddit",
+    description: (
+      <>
+        <Text>Alternate frontend for reddit.com.</Text>
+      </>
+    ),
+    image: "/libreddit.png",
+    imageAspectRatio: 200 / 200,
+    link: "https://reddit.sharath.co.in/",
+  },
 ];
 
 const SelfHosted: NextPageWithLayout = () => {

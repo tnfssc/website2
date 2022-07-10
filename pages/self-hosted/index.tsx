@@ -11,7 +11,7 @@ const selfHosted: CardProps[] = [
         <Text>Private search engine for my personal use.</Text>
       </>
     ),
-    image: "/searxng.svg",
+    image: "/searxng.png",
     imageAspectRatio: 853 / 146,
     link: "https://search.sharath.co.in/",
   },

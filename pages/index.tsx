@@ -23,7 +23,6 @@ export const getServerSideProps: GetServerSideProps<{ quote: Response }> = async
     length: 8,
     tags: ["default"],
   };
-  if (Math.random() > 0.5) return { props: { quote: defaultQuote } };
   try {
     const res = await fetch("https://api.quotable.io/random");
     const data = await res.json();

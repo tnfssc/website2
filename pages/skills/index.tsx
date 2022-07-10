@@ -17,7 +17,11 @@ const Skills: NextPageWithLayout = () => {
             <Heading>Skills</Heading>
           </Link>
         </HStack>
-        <VStack py="10">{icons ? <Cloud>{icons}</Cloud> : <div>Loading...</div>}</VStack>
+        <VStack py="10">
+          <VStack p="10" borderRadius="full" backgroundColor="white">
+            {icons ? <Cloud options={{ pinchZoom: false, wheelZoom: false }}>{icons}</Cloud> : <div>Loading...</div>}
+          </VStack>
+        </VStack>
       </VStack>
     </Center>
   );

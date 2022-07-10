@@ -8,7 +8,7 @@ const selfHosted: CardProps[] = [
     title: "SearXNG",
     description: (
       <>
-        <Text>Private search engine for my personal use.</Text>
+        <Text>Private search engine for my personal use. You can use it if you want too.</Text>
       </>
     ),
     image: "/searxng.png",
@@ -19,7 +19,10 @@ const selfHosted: CardProps[] = [
     title: "LibReddit",
     description: (
       <>
-        <Text>Alternate frontend for reddit.com.</Text>
+        <Text>
+          Alternate frontend for reddit.com. I use a ton of reddit, so a little bit of privacy while browsing it helps a
+          lot
+        </Text>
       </>
     ),
     image: "/libreddit.png",

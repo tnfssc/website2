@@ -20,8 +20,7 @@ import { DarkModeSwitch } from "./DarkModeSwitch";
 import { MdSchool, MdSportsCricket, MdHome } from "react-icons/md";
 import { GiSkills } from "react-icons/gi";
 import Link from "./Link";
-import { FaProjectDiagram, FaIndustry } from "react-icons/fa";
-import { GrHost } from "react-icons/gr";
+import { FaProjectDiagram, FaIndustry, FaServer } from "react-icons/fa";
 import AuthButton from "./Auth";
 
 export const NavBarHeight = "56px";
@@ -51,7 +50,7 @@ const items: LIProps[] = [
   {
     href: "/self-hosted",
     name: "Self Hosted",
-    icon: GrHost,
+    icon: FaServer,
   },
   {
     href: "/projects",

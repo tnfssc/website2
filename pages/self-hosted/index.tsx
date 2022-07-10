@@ -12,7 +12,7 @@ const selfHosted: CardProps[] = [
       </>
     ),
     image: "/searxng.png",
-    imageAspectRatio: 853 / 146,
+    imageAspectRatio: 200 / 200,
     link: "https://search.sharath.co.in/",
   },
 ];

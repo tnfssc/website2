@@ -43,6 +43,20 @@ const selfHosted: CardProps[] = [
     imageAspectRatio: 200 / 200,
     link: "https://youtube.sharath.co.in/",
   },
+  {
+    title: "Bibliogram",
+    description: (
+      <>
+        <Text>
+          Alternate frontend for instagram.com. I don&apos;t use instagram, but everyone else please enjoy privacy while
+          browsing it
+        </Text>
+      </>
+    ),
+    image: "/bibliogram.png",
+    imageAspectRatio: 200 / 200,
+    link: "https://instagram.sharath.co.in/",
+  },
 ];
 
 const SelfHosted: NextPageWithLayout = () => {

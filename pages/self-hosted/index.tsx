@@ -29,6 +29,20 @@ const selfHosted: CardProps[] = [
     imageAspectRatio: 200 / 200,
     link: "https://reddit.sharath.co.in/",
   },
+  {
+    title: "ViewTube",
+    description: (
+      <>
+        <Text>
+          Alternate frontend for youtube.com. I use a ton of youtube too, so a little bit of privacy while browsing it
+          helps a lot
+        </Text>
+      </>
+    ),
+    image: "/viewtube.png",
+    imageAspectRatio: 200 / 200,
+    link: "https://youtube.sharath.co.in/",
+  },
 ];
 
 const SelfHosted: NextPageWithLayout = () => {

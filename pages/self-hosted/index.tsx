@@ -42,6 +42,7 @@ const selfHosted: CardProps[] = [
     image: "/viewtube.png",
     imageAspectRatio: 200 / 200,
     link: "https://youtube.sharath.co.in/",
+    imagePadding: "10",
   },
   {
     title: "Bibliogram",

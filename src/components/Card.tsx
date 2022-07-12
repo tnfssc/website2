@@ -6,6 +6,7 @@ import {
   useColorModeValue as colorModeValue,
   HeadingProps,
   TextProps,
+  SpaceProps,
   BoxProps,
   useDisclosure,
   Modal,
@@ -31,6 +32,7 @@ export type CardProps = Partial<{
   descriptionProps: TextProps;
   image: string;
   imageAspectRatio: number;
+  imagePadding?: SpaceProps["p"];
   link: string;
 }> &
   Omit<BoxProps, "title">;
@@ -43,6 +45,7 @@ export default function Card({
   image = "",
   imageAspectRatio = 1,
   link = "#",
+  imagePadding = "3",
   ...props
 }: CardProps) {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -63,10 +66,12 @@ export default function Card({
             pos="relative"
             w="full"
             h="full"
+            overflow="hidden"
+            borderRadius="full"
             style={{ aspectRatio: "1", cursor: "pointer" }}
             onClick={() => router.push(link)}>
             <Flex flexDir="column" justifyContent="center" h="full">
-              <Box>
+              <Box p={imagePadding}>
                 <Image
                   src={image}
                   layout={"responsive"}

@@ -58,6 +58,19 @@ const selfHosted: CardProps[] = [
     imageAspectRatio: 200 / 200,
     link: "https://instagram.sharath.co.in/",
   },
+  {
+    title: "YourLS",
+    description: (
+      <>
+        <Text>
+          Private URL shortener. You can&apos;t use it. But hey, you can always ping me if you want to get a short URL.
+        </Text>
+      </>
+    ),
+    image: "/yourls-logo.svg",
+    imageAspectRatio: 512 / 210,
+    link: "https://tinyurl.sharath.co.in/",
+  },
 ];
 
 const SelfHosted: NextPageWithLayout = () => {

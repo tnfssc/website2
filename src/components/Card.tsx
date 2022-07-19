@@ -71,15 +71,17 @@ export default function Card({
             style={{ aspectRatio: "1", cursor: "pointer" }}
             onClick={() => router.push(link)}>
             <Flex flexDir="column" justifyContent="center" h="full">
-              <Box p={imagePadding}>
-                <Image
-                  src={image}
-                  layout={"responsive"}
-                  width={"100%"}
-                  height={`${100 / imageAspectRatio}%`}
-                  alt="img"
-                />
-              </Box>
+              <motion.div whileHover={{ scale: 1.06 }}>
+                <Box p={imagePadding}>
+                  <Image
+                    src={image}
+                    layout={"responsive"}
+                    width={"100%"}
+                    height={`${100 / imageAspectRatio}%`}
+                    alt="img"
+                  />
+                </Box>
+              </motion.div>
             </Flex>
           </Box>
         </motion.div>

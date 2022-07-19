@@ -8,14 +8,18 @@ import { skills } from "../../src/data/skills";
 type SkillIconProps = { icon: React.FC; name: string; url: string };
 
 const SkillIcon: React.FC<SkillIconProps> = ({ icon, name, url }) => (
-  <motion.span whileHover={{ scale: 1.06 }}>
+  <motion.span whileHover={{ scale: 1.06 }} style={{ borderRadius: "50%", overflow: "hidden" }}>
     <Tooltip label={name}>
       <IconButton
         p="6"
         bgColor="transparent"
         w="44"
         h="44"
-        icon={<Icon w="40" h="40" as={icon} />}
+        icon={
+          <motion.span whileHover={{ scale: 1.06 }}>
+            <Icon w="32" h="32" as={icon} />
+          </motion.span>
+        }
         aria-label={name}
         onClick={_ => window.open(url, "_blank", "noreferrer")}
       />

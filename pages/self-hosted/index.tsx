@@ -67,6 +67,7 @@ const selfHosted: CardProps[] = [
     ),
     image: "/zulip.png",
     imageAspectRatio: 200 / 200,
+    imagePadding: "-10",
     link: "https://chat.sharath.co.in/join/2w4dxubxdrmshbuh2nv4hmyz/",
   },
   {

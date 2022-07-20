@@ -28,7 +28,7 @@ const experiences: CardProps[] = [
         </Text>
       </>
     ),
-    image: "/saaslabs-logo.jpeg",
+    image: "/saaslabs.jpg",
     imageAspectRatio: 200 / 200,
     link: "https://saaslabs.co",
   },

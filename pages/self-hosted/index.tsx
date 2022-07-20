@@ -59,6 +59,17 @@ const selfHosted: CardProps[] = [
     link: "https://instagram.sharath.co.in/",
   },
   {
+    title: "Zulip",
+    description: (
+      <>
+        <Text>Slack alternative without voice features. A place for my friends and people.</Text>
+      </>
+    ),
+    image: "/zulip.png",
+    imageAspectRatio: 200 / 200,
+    link: "https://chat.sharath.co.in/join/2w4dxubxdrmshbuh2nv4hmyz/",
+  },
+  {
     title: "YourLS",
     description: (
       <>

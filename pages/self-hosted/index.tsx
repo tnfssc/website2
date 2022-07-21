@@ -83,6 +83,20 @@ const selfHosted: CardProps[] = [
     imageAspectRatio: 512 / 210,
     link: "https://tinyurl.sharath.co.in/",
   },
+  {
+    title: "Coder",
+    description: (
+      <>
+        <Text>
+          Private Coder instance. It is like VSCode, but in a browser. You can&apos;t use it. But, I can&apos;t stop you
+          from trying.
+        </Text>
+      </>
+    ),
+    image: "/coder.png",
+    imageAspectRatio: 200 / 200,
+    link: "https://code.sharath.co.in/",
+  },
 ];
 
 const SelfHosted: NextPageWithLayout = () => {

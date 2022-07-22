@@ -85,6 +85,19 @@ const selfHosted: CardProps[] = [
     link: "https://chat.sharath.co.in/join/2w4dxubxdrmshbuh2nv4hmyz/",
   },
   {
+    title: "VaultWarden",
+    description: (
+      <>
+        <Text>
+          A private BitWarden server with VaultWarden implementation. You will need an invite if you want to use it.
+        </Text>
+      </>
+    ),
+    image: "/vaultwarden.jpeg",
+    imageAspectRatio: 200 / 200,
+    link: "https://vaultwarden.sharath.co.in/",
+  },
+  {
     title: "YourLS",
     description: (
       <>

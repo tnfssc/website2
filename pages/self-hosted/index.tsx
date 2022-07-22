@@ -93,8 +93,8 @@ const selfHosted: CardProps[] = [
         </Text>
       </>
     ),
-    image: "/vaultwarden.jpeg",
-    imageAspectRatio: 200 / 200,
+    image: "/bitwarden.png",
+    imageAspectRatio: 375 / 250,
     link: "https://vaultwarden.sharath.co.in/",
   },
   {

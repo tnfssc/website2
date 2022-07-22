@@ -1,6 +1,5 @@
 import { Heading, Text, VStack } from "@chakra-ui/react";
 import { GetServerSideProps, InferGetServerSidePropsType } from "next";
-import Link from "../src/components/Link";
 
 type Response = {
   _id: string;
@@ -36,9 +35,6 @@ export const getServerSideProps: GetServerSideProps<{ quote: Response }> = async
 export default function Home({ quote }: InferGetServerSidePropsType<typeof getServerSideProps>) {
   return (
     <VStack display="flex" flexDirection="column" justifyContent="center" px="3">
-      <Text pb="20" color="red">
-        <Link href="https://blog.sharath.co.in" isExternal>Checkout my blog</Link>
-      </Text>
       <Heading textAlign="center">{quote.content}</Heading>
       {quote.author && <Text>- {quote.author}</Text>}
     </VStack>

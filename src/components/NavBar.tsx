@@ -14,6 +14,7 @@ import {
   ListItem,
   Text,
   useDisclosure,
+  HStack,
 } from "@chakra-ui/react";
 import { useRef } from "react";
 import { DarkModeSwitch } from "./DarkModeSwitch";
@@ -81,11 +82,14 @@ export default function NavDrawer() {
     <>
       <header>
         <Box p="2" display="flex" justifyContent="space-between" alignItems="center">
-          <Box>
+          <HStack>
             <Link href="/" onClick={onClose}>
               <IconButton variant="ghost" aria-label="home" icon={<Icon as={MdHome} w="7" h="7" />} />
             </Link>
-          </Box>
+            <Text>
+              <Link href="https://blog.sharath.co.in" isExternal>Go to blog.sharath.co.in</Link>
+            </Text>
+          </HStack>
           <IconButton variant="ghost" aria-label="open-drawer" ref={r => (btnRef.current = r)} onClick={onOpen}>
             <HamburgerIcon />
           </IconButton>

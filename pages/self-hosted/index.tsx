@@ -5,6 +5,20 @@ import Link from "../../src/components/Link";
 
 const selfHosted: CardProps[] = [
   {
+    title: "Sharath's Blog",
+    description: (
+      <>
+        <Text>
+          My private blog. I post here very rarely. You can checkout if there are any posts there. It is powered by
+          Ghost.org
+        </Text>
+      </>
+    ),
+    image: "/ghost.png",
+    imageAspectRatio: 800 / 294,
+    link: "https://blog.sharath.co.in/",
+  },
+  {
     title: "SearXNG",
     description: (
       <>

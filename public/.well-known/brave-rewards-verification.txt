@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: sharath.co.in
+Token: 266bfb650bb02b0046b950266008a6c069be3217cdbb239724325def17febf02

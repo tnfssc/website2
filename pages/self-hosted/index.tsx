@@ -30,6 +30,20 @@ const selfHosted: CardProps[] = [
     link: "https://search.sharath.co.in/",
   },
   {
+    title: "Kutt",
+    description: (
+      <>
+        <Text>
+          A free URL shortener. It&apos;s open source and you can use it. Shorten all your URLs and share them with
+          everyone.
+        </Text>
+      </>
+    ),
+    image: "/kutt.png",
+    imageAspectRatio: 363 / 404,
+    link: "https://tinyurl.sharath.co.in/",
+  },
+  {
     title: "LibReddit",
     description: (
       <>

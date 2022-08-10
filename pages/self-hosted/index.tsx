@@ -44,21 +44,6 @@ const selfHosted: CardProps[] = [
     link: "https://reddit.sharath.co.in/",
   },
   {
-    title: "ViewTube",
-    description: (
-      <>
-        <Text>
-          Alternate frontend for youtube.com. I use a ton of youtube too, so a little bit of privacy while browsing it
-          helps a lot
-        </Text>
-      </>
-    ),
-    image: "/viewtube.png",
-    imageAspectRatio: 200 / 200,
-    link: "https://youtube.sharath.co.in/",
-    imagePadding: "10",
-  },
-  {
     title: "Bibliogram",
     description: (
       <>
@@ -84,33 +69,6 @@ const selfHosted: CardProps[] = [
     image: "/bitwarden.png",
     imageAspectRatio: 375 / 250,
     link: "https://vaultwarden.sharath.co.in/",
-  },
-  {
-    title: "YourLS",
-    description: (
-      <>
-        <Text>
-          Private URL shortener. You can&apos;t use it. But hey, you can always ping me if you want to get a short URL.
-        </Text>
-      </>
-    ),
-    image: "/yourls-logo.svg",
-    imageAspectRatio: 512 / 210,
-    link: "https://tinyurl.sharath.co.in/",
-  },
-  {
-    title: "Coder",
-    description: (
-      <>
-        <Text>
-          Private Coder instance. It is like VSCode, but in a browser. You can&apos;t use it. But, I can&apos;t stop you
-          from trying.
-        </Text>
-      </>
-    ),
-    image: "/coder.png",
-    imageAspectRatio: 200 / 200,
-    link: "https://code.sharath.co.in/",
   },
 ];
 

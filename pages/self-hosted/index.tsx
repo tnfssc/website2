@@ -16,6 +16,7 @@ const selfHosted: CardProps[] = [
     ),
     image: "/ghost.png",
     imageAspectRatio: 800 / 294,
+    imagePadding: 12,
     link: "https://blog.sharath.co.in/",
   },
   {
@@ -27,7 +28,22 @@ const selfHosted: CardProps[] = [
     ),
     image: "/searxng.png",
     imageAspectRatio: 200 / 200,
+    imagePadding: 16,
     link: "https://search.sharath.co.in/",
+  },
+  {
+    title: "CloudTube",
+    description: (
+      <>
+        <Text>
+          Alternative YouTube frontend for YouTube addicts. You can use it. But, you can&apos;t abuse it.
+        </Text>
+      </>
+    ),
+    image: "/cloudtube.svg",
+    imageAspectRatio: 30 / 25,
+    imagePadding: 24,
+    link: "https://youtube.sharath.co.in/",
   },
   {
     title: "Kutt",
@@ -54,6 +70,7 @@ const selfHosted: CardProps[] = [
     ),
     image: "/penpot.jpeg",
     imageAspectRatio: 900 / 900,
+    imagePadding: 16,
     link: "https://figma.sharath.co.in/",
   },
   {
@@ -68,6 +85,7 @@ const selfHosted: CardProps[] = [
     ),
     image: "/libreddit.png",
     imageAspectRatio: 200 / 200,
+    imagePadding: 16,
     link: "https://reddit.sharath.co.in/",
   },
   {
@@ -82,6 +100,7 @@ const selfHosted: CardProps[] = [
     ),
     image: "/bibliogram.png",
     imageAspectRatio: 200 / 200,
+    imagePadding: 16,
     link: "https://instagram.sharath.co.in/",
   },
   {
@@ -95,7 +114,22 @@ const selfHosted: CardProps[] = [
     ),
     image: "/bitwarden.png",
     imageAspectRatio: 375 / 250,
+    imagePadding: 16,
     link: "https://vaultwarden.sharath.co.in/",
+  },
+  {
+    title: "Portainer",
+    description: (
+      <>
+        <Text>
+          A portainer web GUI for managing my Docker Swarm running all of these services. You will never use it. Only I will.
+        </Text>
+      </>
+    ),
+    image: "/docker.jpeg",
+    imageAspectRatio: 2700 / 2311,
+    imagePadding: 16,
+    link: "https://portainer.sharath.co.in/",
   },
 ];
 

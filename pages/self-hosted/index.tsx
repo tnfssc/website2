@@ -52,7 +52,7 @@ const selfHosted: CardProps[] = [
         </Text>
       </>
     ),
-    image: "/penpot.png",
+    image: "/penpot.jpeg",
     imageAspectRatio: 900 / 900,
     link: "https://figma.sharath.co.in/",
   },

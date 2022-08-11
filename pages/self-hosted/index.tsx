@@ -90,9 +90,14 @@ const SelfHosted: NextPageWithLayout = () => {
   return (
     <Center>
       <VStack w="full">
-        <Link href="/self-hosted">
-          <Heading>Self Hosted</Heading>
-        </Link>
+        <VStack>
+          <Link href="/self-hosted">
+            <Heading>Self Hosted</Heading>
+          </Link>
+          <Link isExternal href="https://stats.uptimerobot.com/nPX9VSXZ6v">
+            Status
+          </Link>
+        </VStack>
         <Center py="10">
           <Wrap spacing={6} justify="center">
             {selfHosted.map(project => (

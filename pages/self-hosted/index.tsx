@@ -44,6 +44,19 @@ const selfHosted: CardProps[] = [
     link: "https://tinyurl.sharath.co.in/",
   },
   {
+    title: "Penpot",
+    description: (
+      <>
+        <Text>
+          Open source alternative for Figma. Create account and start using it.
+        </Text>
+      </>
+    ),
+    image: "/penpot.png",
+    imageAspectRatio: 900 / 900,
+    link: "https://figma.sharath.co.in/",
+  },
+  {
     title: "LibReddit",
     description: (
       <>

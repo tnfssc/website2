@@ -46,6 +46,20 @@ const selfHosted: CardProps[] = [
     link: "https://youtube.sharath.co.in/",
   },
   {
+    title: "OneDev",
+    description: (
+      <>
+        <Text>
+          OneDev is a self-hosted git service with Kanban and CI/CD, featuring out-of-box code intelligence, customizable issue workflow, and CI/CD without writing Yaml. Go on, try it.
+        </Text>
+      </>
+    ),
+    image: "/onedev.png",
+    imageAspectRatio: 200 / 200,
+    imagePadding: 16,
+    link: "https://onedev.sharath.co.in/",
+  },
+  {
     title: "Kutt",
     description: (
       <>
@@ -128,8 +142,22 @@ const selfHosted: CardProps[] = [
     ),
     image: "/docker.jpeg",
     imageAspectRatio: 2700 / 2311,
-    imagePadding: 16,
+    imagePadding: 20,
     link: "https://portainer.sharath.co.in/",
+  },
+  {
+    title: "Code Server",
+    description: (
+      <>
+        <Text>
+          Code Server is a VS Code server so that I have a dev environment everywhere I go. Only I can use it.
+        </Text>
+      </>
+    ),
+    image: "/vscode.png",
+    imageAspectRatio: 200 / 200,
+    imagePadding: 28,
+    link: "https://vscode.sharath.co.in/",
   },
 ];
 

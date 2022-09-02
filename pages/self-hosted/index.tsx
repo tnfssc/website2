@@ -35,9 +35,7 @@ const selfHosted: CardProps[] = [
     title: "CloudTube",
     description: (
       <>
-        <Text>
-          Alternative YouTube frontend for YouTube addicts. You can use it. But, you can&apos;t abuse it.
-        </Text>
+        <Text>Alternative YouTube frontend for YouTube addicts. You can use it. But, you can&apos;t abuse it.</Text>
       </>
     ),
     image: "/cloudtube.svg",
@@ -46,11 +44,44 @@ const selfHosted: CardProps[] = [
     link: "https://youtube.sharath.co.in/",
   },
   {
+    title: "Jitsi Meet",
+    description: (
+      <>
+        <Text>Alternative to Google Meet. Just use it to have meetings with people. Privacy friendly as well.</Text>
+      </>
+    ),
+    image: "/jitsi.png",
+    imageAspectRatio: 375 / 375,
+    imagePadding: 24,
+    link: "https://meet.sharath.co.in/",
+  },
+  {
+    title: "RustDesk",
+    description: (
+      <>
+        <Text>
+          An alternative to TeamViewer and AnyDesk. It is a remote desktop application written in Rust.
+          <Text>
+            Use ID Server: <pre>rustdesk.sharath.co.in</pre>.
+          </Text>
+          <Text>
+            Use Key: <pre>6ILz0Vr6wuqJzPIQnVD4x4td73Hc5ivyUq8wvXtJFXQ=</pre>.
+          </Text>
+        </Text>
+      </>
+    ),
+    image: "/rustdesk.svg",
+    imageAspectRatio: 375 / 375,
+    imagePadding: 24,
+    link: "https://rustdesk.com/",
+  },
+  {
     title: "OneDev",
     description: (
       <>
         <Text>
-          OneDev is a self-hosted git service with Kanban and CI/CD, featuring out-of-box code intelligence, customizable issue workflow, and CI/CD without writing Yaml. Go on, try it.
+          OneDev is a self-hosted git service with Kanban and CI/CD, featuring out-of-box code intelligence,
+          customizable issue workflow, and CI/CD without writing Yaml. Go on, try it.
         </Text>
       </>
     ),
@@ -77,9 +108,7 @@ const selfHosted: CardProps[] = [
     title: "Penpot",
     description: (
       <>
-        <Text>
-          Open source alternative for Figma. Create account and start using it.
-        </Text>
+        <Text>Open source alternative for Figma. Create account and start using it.</Text>
       </>
     ),
     image: "/penpot.jpeg",
@@ -136,7 +165,8 @@ const selfHosted: CardProps[] = [
     description: (
       <>
         <Text>
-          A portainer web GUI for managing my Docker Swarm running all of these services. You will never use it. Only I will.
+          A portainer web GUI for managing my Docker Swarm running all of these services. You will never use it. Only I
+          will.
         </Text>
       </>
     ),

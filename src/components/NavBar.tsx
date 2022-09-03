@@ -87,7 +87,7 @@ export default function NavDrawer() {
               <IconButton variant="ghost" aria-label="home" icon={<Icon as={MdHome} w="7" h="7" />} />
             </Link>
             <Text>
-              <Link href="https://blog.sharath.co.in" isExternal>Go to blog.sharath.co.in</Link>
+              <Link href="https://new.sharath.co.in" isExternal>Go to new.sharath.co.in</Link>
             </Text>
           </HStack>
           <IconButton variant="ghost" aria-label="open-drawer" ref={r => (btnRef.current = r)} onClick={onOpen}>

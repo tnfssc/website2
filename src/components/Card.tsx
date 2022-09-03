@@ -109,19 +109,29 @@ export default function Card({
           </ModalHeader>
           <ModalCloseButton />
           <ModalBody>
-            <Box bg={"white"} pos="relative" w="full" h="full" style={{ aspectRatio: "1" }} mb={6}>
-              <Flex flexDir="column" justifyContent="center" h="full">
-                <Box>
-                  <Image
-                    src={image}
-                    layout={"responsive"}
-                    width={"100%"}
-                    height={`${100 / imageAspectRatio}%`}
-                    alt="img"
-                  />
-                </Box>
-              </Flex>
-            </Box>
+            <Link isExternal href={link}>
+              <Box
+                bg={"white"}
+                pos="relative"
+                w="full"
+                h="full"
+                style={{ aspectRatio: "1" }}
+                mb={6}
+                p="3"
+                borderRadius="3xl">
+                <Flex flexDir="column" justifyContent="center" h="full">
+                  <Box>
+                    <Image
+                      src={image}
+                      layout={"responsive"}
+                      width={"100%"}
+                      height={`${100 / imageAspectRatio}%`}
+                      alt="img"
+                    />
+                  </Box>
+                </Flex>
+              </Box>
+            </Link>
             <Text as="span" overflow={"auto"} {...descriptionProps}>
               {description}
             </Text>

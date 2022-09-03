@@ -1,9 +1,8 @@
 # [![www.sharath.co.in](./public/icons/maskable/maskable_icon_x192.png)](https://sharath.co.in/)
 
-[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](/)
-[![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](/)
-[![forthebadge](https://forthebadge.com/images/badges/uses-html.svg)](/)
-[![forthebadge](https://forthebadge.com/images/badges/validated-html5.svg)](/)
+[![status](https://img.shields.io/badge/status-maintenance%20mode-orange?style=for-the-badge&logo=)](/)
+[![rewrite status](https://img.shields.io/badge/rewrite%20status-meme-red?style=for-the-badge&logo=)](https://github.com/tnfssc/sharath.co.in)
+[![new.sharath.co.in](https://img.shields.io/badge/visit-new.sharath.co.in-blue?style=for-the-badge&logo=)](https://new.sharath.co.in)
 
 ## Tech used
 

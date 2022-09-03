@@ -1,4 +1,4 @@
-import { Center, Heading, Text, VStack, Wrap, WrapItem } from "@chakra-ui/react";
+import { Center, Heading, Text, VStack, Wrap, WrapItem, Code } from "@chakra-ui/react";
 import { NextPageWithLayout } from "_/global";
 import Card, { CardProps } from "../../src/components/Card";
 import Link from "../../src/components/Link";
@@ -60,12 +60,18 @@ const selfHosted: CardProps[] = [
     description: (
       <>
         <Text>
-          An alternative to TeamViewer and AnyDesk. It is a remote desktop application written in Rust.
-          <Text>
-            Use ID Server: <pre>rustdesk.sharath.co.in</pre>.
+          An alternative to TeamViewer and AnyDesk. It is a remote desktop application written in Rust.{" "}
+          <Link
+            isExternal
+            href="https://rustdesk.com/docs/en/self-host/install/#step-3--set-hbbshbbr-address-on-client-side">
+            Tutorial? Click here.
+          </Link>
+          <Text>&nbsp;</Text>
+          <Text style={{ display: "flex" }}>
+            Use ID Server:&nbsp;<Code>rustdesk.sharath.co.in</Code>
           </Text>
-          <Text>
-            Use Key: <pre>6ILz0Vr6wuqJzPIQnVD4x4td73Hc5ivyUq8wvXtJFXQ=</pre>.
+          <Text style={{ display: "flex" }}>
+            Use Key:&nbsp;<Code>6ILz0Vr6wuqJzPIQnVD4x4td73Hc5ivyUq8wvXtJFXQ=</Code>
           </Text>
         </Text>
       </>

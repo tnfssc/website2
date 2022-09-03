@@ -15,9 +15,12 @@
 # production
 /build
 
-/public/sw.js
-/public/workbox-*.js
-/public/fallback--*.js
+/public/sw*.js
+/public/workbox*.js
+/public/fallback*.js
+/public/sw*.map
+/public/workbox*.map
+/public/fallback*.map
 
 # misc
 .DS_Store

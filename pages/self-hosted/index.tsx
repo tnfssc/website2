@@ -205,7 +205,7 @@ const SelfHosted: NextPageWithLayout = () => {
           <Link href="/self-hosted">
             <Heading>Self Hosted</Heading>
           </Link>
-          <Link isExternal href="https://stats.uptimerobot.com/nPX9VSXZ6v">
+          <Link isExternal href="//status.sharath.co.in">
             Status
           </Link>
         </VStack>

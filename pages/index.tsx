@@ -24,7 +24,10 @@ export const getServerSideProps: GetServerSideProps<{ quote: Response }> = async
     tags: ["default"],
   };
   try {
-    const res = await fetch("https://api.quotable.io/random");
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 7000);
+    const res = await fetch("https://api.quotable.io/random", { signal: controller.signal });
+    clearTimeout(timeoutId);
     const data = await res.json();
     return { props: { quote: data } };
   } catch (err) {
